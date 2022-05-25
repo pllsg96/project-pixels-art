@@ -26,10 +26,20 @@ for (let indexL = 0; indexL < linesDraw; indexL++) {
 }
 
 function changeSelection(event) {
-  whoClicked = event.target;
-  whoIsSelected = document.querySelector(".selected");
+  let whoClicked = event.target;
+  let whoIsSelected = document.querySelector(".selected");
   whoIsSelected.classList.remove("selected");
   whoClicked.classList.add("selected");
+}
+
+function insertColorPixel(event) {
+  let whoClicked = event.target;
+  let selected = document.querySelector(".selected");
+  let style = window.getComputedStyle(selected);
+  let bkg = style.getPropertyValue("background-color");
+  whoClicked.style.background = bkg
+  console.log();
+  
 }
 
 let color1 = document.getElementsByClassName("color")[0];
@@ -37,8 +47,20 @@ let color2 = document.getElementsByClassName("color")[1];
 let color3 = document.getElementsByClassName("color")[2];
 let color4 = document.getElementsByClassName("color")[3];
 
+let pixelBoard = document.getElementsByClassName("pixel");
+
 color1.addEventListener("click", changeSelection);
 color2.addEventListener("click", changeSelection);
 color3.addEventListener("click", changeSelection);
 color4.addEventListener("click", changeSelection);
+
+for (let index = 0; index < pixelBoard.length; index++) {
+  pixelBoard[index].addEventListener("click", insertColorPixel);
+  
+}
+
+
+
+
+
 
