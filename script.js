@@ -1,10 +1,12 @@
-let fatherPixelsDraw = document.getElementById("pixelsSection");
+let fatherPixelsDraw = document.getElementById("pixel-board");
 function pixelUnitDraw(father) {
   let pixelsDraw = document.createElement("div");
   pixelsDraw.style.border = "solid black 1px";
-  pixelsDraw.style.width = "25px";
-  pixelsDraw.style.height = "25px";
+  pixelsDraw.style.width = "40px";
+  pixelsDraw.style.height = "40px";
   pixelsDraw.style.display = "inline-block";
+  pixelsDraw.style.background = "white";
+  pixelsDraw.className = "pixel"
   father.appendChild(pixelsDraw);
 }
 
@@ -22,5 +24,6 @@ for (let indexL = 0; indexL < linesDraw; indexL++) {
   }
   
 }
+
 
 

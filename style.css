@@ -27,10 +27,11 @@
 }
 
 #pixelsSection{
-  height: 200px;
+  /* height: 200px; */
   border: red 1px solid;
   padding: 0%;
 }
 
-
-
+.linesDraw{
+  height: 42px;
+}
