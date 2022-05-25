@@ -25,5 +25,20 @@ for (let indexL = 0; indexL < linesDraw; indexL++) {
   
 }
 
+function changeSelection(event) {
+  whoClicked = event.target;
+  whoIsSelected = document.querySelector(".selected");
+  whoIsSelected.classList.remove("selected");
+  whoClicked.classList.add("selected");
+}
 
+let color1 = document.getElementsByClassName("color")[0];
+let color2 = document.getElementsByClassName("color")[1];
+let color3 = document.getElementsByClassName("color")[2];
+let color4 = document.getElementsByClassName("color")[3];
+
+color1.addEventListener("click", changeSelection);
+color2.addEventListener("click", changeSelection);
+color3.addEventListener("click", changeSelection);
+color4.addEventListener("click", changeSelection);
 
