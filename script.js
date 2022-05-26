@@ -37,22 +37,19 @@ function insertColorPixel(event) {
   let selected = document.querySelector(".selected");
   let style = window.getComputedStyle(selected);
   let bkg = style.getPropertyValue("background-color");
-  whoClicked.style.background = bkg
+  whoClicked.style.background = bkg;
   console.log();
   
 }
 
-let color1 = document.getElementsByClassName("color")[0];
-let color2 = document.getElementsByClassName("color")[1];
-let color3 = document.getElementsByClassName("color")[2];
-let color4 = document.getElementsByClassName("color")[3];
+let palletOptions = document.getElementsByClassName("color");
+
+for (let index = 0; index < palletOptions.length; index++) {
+  palletOptions[index].addEventListener("click", changeSelection);
+  
+}
 
 let pixelBoard = document.getElementsByClassName("pixel");
-
-color1.addEventListener("click", changeSelection);
-color2.addEventListener("click", changeSelection);
-color3.addEventListener("click", changeSelection);
-color4.addEventListener("click", changeSelection);
 
 for (let index = 0; index < pixelBoard.length; index++) {
   pixelBoard[index].addEventListener("click", insertColorPixel);
