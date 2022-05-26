@@ -12,6 +12,10 @@ function pixelUnitDraw(father) {
 
 let linesDraw = 5;
 let rowsDraw = 5;
+let palletOptions = document.getElementsByClassName("color");
+let pixelBoard = document.getElementsByClassName("pixel");
+let buttonSelection = document.getElementById("clear-board");
+buttonSelection.addEventListener("click", clearAllBoard);
 
 
 for (let indexL = 0; indexL < linesDraw; indexL++) {
@@ -42,19 +46,28 @@ function insertColorPixel(event) {
   
 }
 
-let palletOptions = document.getElementsByClassName("color");
+function clearAllBoard() {
+  for (let index = 0; index < pixelBoard.length; index++) {
+    pixelBoard[index].style.background = "white";
+  }
+}
+
+
 
 for (let index = 0; index < palletOptions.length; index++) {
   palletOptions[index].addEventListener("click", changeSelection);
   
 }
 
-let pixelBoard = document.getElementsByClassName("pixel");
+
 
 for (let index = 0; index < pixelBoard.length; index++) {
   pixelBoard[index].addEventListener("click", insertColorPixel);
   
 }
+
+
+
 
 
 

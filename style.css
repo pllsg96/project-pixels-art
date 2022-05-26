@@ -1,5 +1,12 @@
+#title{
+  text-align: center;
+}
+
 #color-palette{
   height: 50px;
+  padding: 0;
+  margin-bottom: 5px;
+  text-align: center;
 }
 
 .color{
@@ -26,25 +33,13 @@
   background-color: green;
 }
 
-#clear-board{
-  border: solid black 2px;
-  border-radius: 10%;
-  background-color: beige;
-  color: black;
-  width: 40px;
-  height: 20px;
-  
+#section-button{
   margin-bottom: 10px;
-  font-size: 12px;
   text-align: center;
-  vertical-align: center;
-
 }
 
-#pixelsSection{
-  /* height: 200px; */
-  border: red 1px solid;
-  padding: 0%;
+#pixel-board{
+  text-align: center;
 }
 
 .linesDraw{
