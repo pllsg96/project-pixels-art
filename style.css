@@ -38,6 +38,13 @@
   text-align: center;
 }
 
+
+
+#changeQuantityPixels{
+  display: inline-block;
+  margin-left: 10px;
+}
+
 #pixel-board{
   text-align: center;
 }

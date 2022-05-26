@@ -1,4 +1,19 @@
+let howManyLinesDraw = 4;
+let howManyRowsDraw = 4;
+let palletOptions = document.getElementsByClassName("color");
+let pixelBoard = document.getElementsByClassName("pixel");
+let buttonSelection = document.getElementById("clear-board");
 let fatherPixelsDraw = document.getElementById("pixel-board");
+let boardGenerateButton = document.getElementById("generate-board");
+let inputSizeBoard = document.getElementById("board-size");
+
+boardGenerateButton.addEventListener("click", checkSize);
+
+
+
+
+
+// Function to create a unit pixel
 function pixelUnitDraw(father) {
   let pixelsDraw = document.createElement("div");
   pixelsDraw.style.border = "solid black 1px";
@@ -10,25 +25,22 @@ function pixelUnitDraw(father) {
   father.appendChild(pixelsDraw);
 }
 
-let linesDraw = 5;
-let rowsDraw = 5;
-let palletOptions = document.getElementsByClassName("color");
-let pixelBoard = document.getElementsByClassName("pixel");
-let buttonSelection = document.getElementById("clear-board");
-buttonSelection.addEventListener("click", clearAllBoard);
-
-
-for (let indexL = 0; indexL < linesDraw; indexL++) {
-  let lineDiv = document.createElement("div");
-  lineDiv.className = "linesDraw";
-  fatherPixelsDraw.appendChild(lineDiv);
-  let lineDraw = document.getElementsByClassName("linesDraw")[indexL];
-  for (let indexR = 0; indexR < rowsDraw; indexR++) {
-    pixelUnitDraw(lineDraw);
+generatePixels();
+// for to generate selected quantity of pixels in board when start
+function generatePixels() {
+  for (let indexL = 0; indexL < howManyLinesDraw; indexL++) {
+    let lineDiv = document.createElement("div");
+    lineDiv.className = "linesDraw";
+    fatherPixelsDraw.appendChild(lineDiv);
+    let lineDraw = document.getElementsByClassName("linesDraw")[indexL];
+    for (let indexR = 0; indexR < howManyRowsDraw; indexR++) {
+      pixelUnitDraw(lineDraw);
+    } 
   }
-  
 }
 
+
+// Function to change the class selected to another color in pallet
 function changeSelection(event) {
   let whoClicked = event.target;
   let whoIsSelected = document.querySelector(".selected");
@@ -36,36 +48,49 @@ function changeSelection(event) {
   whoClicked.classList.add("selected");
 }
 
+// Function to inser the selected color to clicked pixel
 function insertColorPixel(event) {
   let whoClicked = event.target;
   let selected = document.querySelector(".selected");
   let style = window.getComputedStyle(selected);
   let bkg = style.getPropertyValue("background-color");
   whoClicked.style.background = bkg;
-  console.log();
-  
 }
 
+// Function to clear all board
 function clearAllBoard() {
   for (let index = 0; index < pixelBoard.length; index++) {
     pixelBoard[index].style.background = "white";
   }
 }
 
-
-
+// for to go through to check if any color of pallete were clicked
 for (let index = 0; index < palletOptions.length; index++) {
   palletOptions[index].addEventListener("click", changeSelection);
-  
 }
 
-
-
+// for to go through if any pixel's board were clicked
 for (let index = 0; index < pixelBoard.length; index++) {
   pixelBoard[index].addEventListener("click", insertColorPixel);
-  
 }
 
+buttonSelection.addEventListener("click", clearAllBoard);
+
+function checkSize() {
+  let valor = (inputSizeBoard.value); 
+  if (valor.length === 0) {
+    alert("Board inválido!")
+  }
+  else {
+    // for (let index = pixelBoard.length-2; index >= 0; index =- 1) {
+    //   pixelBoard[index].remove();
+    // }
+    // rowsDraw = parseInt(valor);
+    // linesDraw = parseInt(valor);
+    // generatePixels();
+
+  }
+}
 
 
 
