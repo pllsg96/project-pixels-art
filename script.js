@@ -1,11 +1,12 @@
-let howManyLinesDraw = 4;
-let howManyRowsDraw = 4;
+let howManyLinesDraw = 5;
+let howManyRowsDraw = 5;
 let palletOptions = document.getElementsByClassName("color");
 let pixelBoard = document.getElementsByClassName("pixel");
 let buttonSelection = document.getElementById("clear-board");
 let fatherPixelsDraw = document.getElementById("pixel-board");
 let boardGenerateButton = document.getElementById("generate-board");
 let inputSizeBoard = document.getElementById("board-size");
+let clearLines = document.getElementsByClassName("linesDraw");
 
 boardGenerateButton.addEventListener("click", checkSize);
 
@@ -48,7 +49,7 @@ function changeSelection(event) {
   whoClicked.classList.add("selected");
 }
 
-// Function to inser the selected color to clicked pixel
+// Function to insert the selected color to clicked pixel
 function insertColorPixel(event) {
   let whoClicked = event.target;
   let selected = document.querySelector(".selected");
@@ -82,12 +83,6 @@ function checkSize() {
     alert("Board inválido!")
   }
   else {
-    // for (let index = pixelBoard.length-2; index >= 0; index =- 1) {
-    //   pixelBoard[index].remove();
-    // }
-    // rowsDraw = parseInt(valor);
-    // linesDraw = parseInt(valor);
-    // generatePixels();
 
   }
 }
