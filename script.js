@@ -1,5 +1,3 @@
-let drawLines = 5;
-let drawRows = 5;
 let palletOptions = document.getElementsByClassName("color");
 let pixelBoard = document.getElementsByClassName("pixel");
 let buttonSelection = document.getElementById("clear-board");
@@ -7,6 +5,8 @@ let fatherPixelsDraw = document.getElementById("pixel-board");
 let boardGenerateButton = document.getElementById("generate-board");
 let inputSizeBoard = document.getElementById("board-size");
 let clearLines = document.getElementsByClassName("linesDraw");
+let drawLines = 5;
+let drawRows = 5;
 boardGenerateButton.addEventListener("click", checkSize);
 buttonSelection.addEventListener("click", clearAllBoard);
 
@@ -30,32 +30,35 @@ function removeAllPixels() {
   }
 }
 
-
-
 // Function to create a unit pixel
 function pixelUnitDraw(father) {
   let pixelsDraw = document.createElement("div");
   pixelsDraw.style.border = "solid black 1px";
   pixelsDraw.style.width = "40px";
   pixelsDraw.style.height = "40px";
+  pixelsDraw.style.borderRadius = "20%";
   pixelsDraw.style.display = "inline-block";
   pixelsDraw.style.background = "white";
   pixelsDraw.className = "pixel"
   father.appendChild(pixelsDraw);
 }
 
+
 generatePixels(drawLines, drawRows);
 // for to generate selected quantity of pixels in board when start
 function generatePixels(howManyLinesDraw, howManyRowsDraw) {
-  for (let indexL = 0; indexL < howManyLinesDraw; indexL++) {
-    let lineDiv = document.createElement("div");
-    lineDiv.className = "linesDraw";
-    fatherPixelsDraw.appendChild(lineDiv);
-    let lineDraw = document.getElementsByClassName("linesDraw")[indexL];
-    for (let indexR = 0; indexR < howManyRowsDraw; indexR++) {
-      pixelUnitDraw(lineDraw);
-    } 
-  }
+  if ((howManyLinesDraw >= 5 && howManyLinesDraw <= 50) ||
+    (howManyRowsDraw >= 5 && howManyRowsDraw <= 50)) {
+      for (let indexL = 0; indexL < howManyLinesDraw; indexL++) {
+        let lineDiv = document.createElement("div");
+        lineDiv.className = "linesDraw";
+        fatherPixelsDraw.appendChild(lineDiv);
+        let lineDraw = document.getElementsByClassName("linesDraw")[indexL];
+        for (let indexR = 0; indexR < howManyRowsDraw; indexR++) {
+          pixelUnitDraw(lineDraw);
+        } 
+      }
+    }
 }
 
 
@@ -95,14 +98,4 @@ function checkIfNeedColor() {
     pixelBoard[index].addEventListener("click", insertColorPixel);
   }  
 }
-
-
-
-
-
-
-
-
-
-
 

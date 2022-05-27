@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <h1 id="title">Paleta de Cores</h1>
+  <header>
+    <h1 id="title">Paleta de Cores</h1>
+  </header>
   <main>
     <section>
       <div id="color-palette">
@@ -23,7 +25,7 @@
         Limpar
       </button>
       <div id="changeQuantityPixels">
-        <input id="board-size" type="number" maxlength="2" min="5" max="49" step="1" oninput="validity.valid||(value='');" >
+        <input id="board-size" type="number" min="5" max="50" step="1" oninput="validity.valid||(value='');" placeholder="Entre 5 e 50" >
         <button id="generate-board">VQV</button>
       </div>
     </section>
