@@ -1,5 +1,5 @@
-let howManyLinesDraw = 5;
-let howManyRowsDraw = 5;
+let drawLines = 5;
+let drawRows = 5;
 let palletOptions = document.getElementsByClassName("color");
 let pixelBoard = document.getElementsByClassName("pixel");
 let buttonSelection = document.getElementById("clear-board");
@@ -7,10 +7,28 @@ let fatherPixelsDraw = document.getElementById("pixel-board");
 let boardGenerateButton = document.getElementById("generate-board");
 let inputSizeBoard = document.getElementById("board-size");
 let clearLines = document.getElementsByClassName("linesDraw");
-
 boardGenerateButton.addEventListener("click", checkSize);
+buttonSelection.addEventListener("click", clearAllBoard);
 
 
+function checkSize() {
+  let valor = (inputSizeBoard.value); 
+  if (valor.length === 0) {
+    alert("Board inválido!")
+  }
+  else {
+    removeAllPixels();
+    let value = document.getElementById("board-size").value;
+    generatePixels(value, value);
+    checkIfNeedColor();
+  }
+}
+
+function removeAllPixels() {
+  while (fatherPixelsDraw.lastChild){
+    fatherPixelsDraw.removeChild(fatherPixelsDraw.lastChild);
+  }
+}
 
 
 
@@ -26,9 +44,9 @@ function pixelUnitDraw(father) {
   father.appendChild(pixelsDraw);
 }
 
-generatePixels();
+generatePixels(drawLines, drawRows);
 // for to generate selected quantity of pixels in board when start
-function generatePixels() {
+function generatePixels(howManyLinesDraw, howManyRowsDraw) {
   for (let indexL = 0; indexL < howManyLinesDraw; indexL++) {
     let lineDiv = document.createElement("div");
     lineDiv.className = "linesDraw";
@@ -71,21 +89,15 @@ for (let index = 0; index < palletOptions.length; index++) {
 }
 
 // for to go through if any pixel's board were clicked
-for (let index = 0; index < pixelBoard.length; index++) {
-  pixelBoard[index].addEventListener("click", insertColorPixel);
+checkIfNeedColor();
+function checkIfNeedColor() {
+  for (let index = 0; index < pixelBoard.length; index++) {
+    pixelBoard[index].addEventListener("click", insertColorPixel);
+  }  
 }
 
-buttonSelection.addEventListener("click", clearAllBoard);
 
-function checkSize() {
-  let valor = (inputSizeBoard.value); 
-  if (valor.length === 0) {
-    alert("Board inválido!")
-  }
-  else {
 
-  }
-}
 
 
 
