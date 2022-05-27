@@ -13,7 +13,7 @@ randomColors();
 
 function randomColors() {
   let colorRandom = document.getElementsByClassName("color");
-  for (let index = 1; index < colorRandom.length; index++) {
+  for (let index = 14; index < colorRandom.length; index++) {
     var randColor = Math.floor(Math.random() * 16777215).toString(16);
     colorRandom[index].style.backgroundColor = "#" + randColor;
   }
@@ -46,7 +46,7 @@ function pixelUnitDraw(father) {
   pixelsDraw.style.border = "solid black 1px";
   pixelsDraw.style.width = "40px";
   pixelsDraw.style.height = "40px";
-  pixelsDraw.style.borderRadius = "10%";
+  pixelsDraw.style.borderRadius = "20%";
   pixelsDraw.style.display = "inline-block";
   pixelsDraw.style.background = "white";
   pixelsDraw.className = "pixel"

@@ -1,3 +1,29 @@
+body{
+  background-image: url("https://img.freepik.com/free-vector/pastel-color-artistic-watercolor-background_1116-207.jpg?w=826&t=st=1653675417~exp=1653676017~hmac=15d54a8bab9d9aa0dc62a52c1fd7e99eed1b3c044cc578a3c43f0409f1c37e28");
+  background-color: #70dbde;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Gochi Hand', cursive;
+  height: 100vh;
+}
+section{
+  margin: 0%;
+}
+
+header{
+  /* background-color: #f195a8; */
+  background-image: url("./images/image134.png");
+  background-size: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h4{
+  text-align: center;
+  margin: 0%;
+}
+
 #title{
   text-align: center;
 }
@@ -9,30 +35,65 @@
   text-align: center;
 }
 
+#color-palette2{
+  height: 50px;
+  padding: 0;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
 .color{
   border: solid 1px black;
   display: inline-block;
-  width: 40px;
-  height: 40px;
-  border-radius: 10%;
+  width: 25px;
+  height: 25px;
+  border-radius: 20%;
   margin-right: 5px;
 }
 
 #blackColor {
   background-color: black;
 }
-
-#purpleColor{
-  background-color: purple;
+#whiteColor{
+  background-color: white;
 }
-
 #blueColor{
   background-color: blue;
 }
-
-#greenColor{
-  background-color: green;
+#blueGreenColor{
+  background-color: #0f6e6a;
 }
+#greenColor{
+  background-color: #207f1a;
+}
+#yellowGreenColor{
+  background-color: #a1d00f;
+}
+#yellowColor{
+  background-color: #ffea22;
+}
+#yellowOrangeColor{
+  background-color: #fec222;
+}
+#orangeColor{
+  background-color: #f85d07;
+}
+#redOrangeColor{
+  background-color: #ea1007;
+}
+#redColor{
+  background-color: #cd0005;
+}
+#redVioletColor{
+  background-color: #9e0054;
+}
+#violetColor{
+  background-color: #3c0257;
+}
+#blueVioletColor{
+  background-color: #4d2677;
+}
+
 
 #section-button{
   margin-bottom: 10px;
