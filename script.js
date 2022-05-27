@@ -9,8 +9,18 @@ let drawLines = 5;
 let drawRows = 5;
 boardGenerateButton.addEventListener("click", checkSize);
 buttonSelection.addEventListener("click", clearAllBoard);
+randomColors();
+
+function randomColors() {
+  let colorRandom = document.getElementsByClassName("color");
+  for (let index = 1; index < colorRandom.length; index++) {
+    var randColor = Math.floor(Math.random() * 16777215).toString(16);
+    colorRandom[index].style.backgroundColor = "#" + randColor;
+  }
+}
 
 
+// Funtion to see if the input is empty
 function checkSize() {
   let valor = (inputSizeBoard.value); 
   if (valor.length === 0) {
@@ -55,11 +65,9 @@ function generatePixels(howManyLinesDraw, howManyRowsDraw) {
   if (howManyRowsDraw < 5) {
     howManyRowsDraw = 5;
   }
-
   if (howManyLinesDraw > 50) {
     howManyLinesDraw = 50;
   }
-
   if (howManyRowsDraw > 50) {
     howManyRowsDraw = 50;
   }
