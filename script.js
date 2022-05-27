@@ -36,29 +36,42 @@ function pixelUnitDraw(father) {
   pixelsDraw.style.border = "solid black 1px";
   pixelsDraw.style.width = "40px";
   pixelsDraw.style.height = "40px";
-  pixelsDraw.style.borderRadius = "20%";
+  pixelsDraw.style.borderRadius = "10%";
   pixelsDraw.style.display = "inline-block";
   pixelsDraw.style.background = "white";
   pixelsDraw.className = "pixel"
   father.appendChild(pixelsDraw);
 }
-
+//((howManyLinesDraw >= 5 && howManyLinesDraw <= 50) ||
+//(howManyRowsDraw >= 5 && howManyRowsDraw <= 50))
 
 generatePixels(drawLines, drawRows);
+
 // for to generate selected quantity of pixels in board when start
 function generatePixels(howManyLinesDraw, howManyRowsDraw) {
-  if ((howManyLinesDraw >= 5 && howManyLinesDraw <= 50) ||
-    (howManyRowsDraw >= 5 && howManyRowsDraw <= 50)) {
-      for (let indexL = 0; indexL < howManyLinesDraw; indexL++) {
-        let lineDiv = document.createElement("div");
-        lineDiv.className = "linesDraw";
-        fatherPixelsDraw.appendChild(lineDiv);
-        let lineDraw = document.getElementsByClassName("linesDraw")[indexL];
-        for (let indexR = 0; indexR < howManyRowsDraw; indexR++) {
-          pixelUnitDraw(lineDraw);
-        } 
-      }
-    }
+  if (howManyLinesDraw < 5) {
+    howManyLinesDraw = 5;
+  }
+  if (howManyRowsDraw < 5) {
+    howManyRowsDraw = 5;
+  }
+
+  if (howManyLinesDraw > 50) {
+    howManyLinesDraw = 50;
+  }
+
+  if (howManyRowsDraw > 50) {
+    howManyRowsDraw = 50;
+  }
+  for (let indexL = 0; indexL < howManyLinesDraw; indexL++) {
+    let lineDiv = document.createElement("div");
+    lineDiv.className = "linesDraw";
+    fatherPixelsDraw.appendChild(lineDiv);
+    let lineDraw = document.getElementsByClassName("linesDraw")[indexL];
+    for (let indexR = 0; indexR < howManyRowsDraw; indexR++) {
+    pixelUnitDraw(lineDraw);
+    } 
+  }
 }
 
 
