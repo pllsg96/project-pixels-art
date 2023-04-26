@@ -33,14 +33,14 @@ h4{
 #color-palette{
   height: 50px;
   padding: 0;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
 #color-palette2{
   height: 50px;
   padding: 0;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   text-align: center;
 }
 
@@ -118,7 +118,7 @@ input{
 }
 
 #board-size{
-  width: 100px;
+  width: 12rem;
   text-align: center;
 }
 
