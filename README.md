@@ -1,15 +1,36 @@
+<h1 align="center"><b>
+  Projeto Pixels Art
+</b></h1>
+
+## Descrição
+<div align="justify">
+  <p>
+    Projeto realizado com objetivo de construir uma página para usar sua imaginação e pixels =)
+  </p>
+</div>
+
+## Tecnologias e técnicas utilizadas
+<div align="justify">
+  <ul>
+    <li>Html</li>
+    <li>Css</li>
+    <li>Javascript</li>
+  </ul>
+</div>
+
+## Deploy
+
+https://pllsg96.github.io/project-pixels-art/
+
+## Exemplos
+
+<div align="center">
+  <img src="./readme/pixel-art.gif" width=60%>
+</div>
+
+<div align="center">
+  <img src="./readme/pixel-art.png" width=60%>
+</div>
+
+
 # :construction: README customizado em construção ! :construction:
-Deploy: https://pllsg96.github.io/project-pixels-art/
-
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
-
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
-
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
