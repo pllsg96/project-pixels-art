@@ -31,6 +31,3 @@ https://pllsg96.github.io/project-pixels-art/
 <div align="center">
   <img src="./readme/pixel-art.png" width=60%>
 </div>
-
-
-# :construction: README customizado em construção ! :construction:
