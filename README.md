@@ -31,3 +31,7 @@ https://pllsg96.github.io/project-pixels-art/
 <div align="center">
   <img src="./readme/pixel-art.png" width=60%>
 </div>
+
+<div align="center">
+  <img src="./readme/pixel-art2.png" width=60%>
+</div>
